@@ -49,7 +49,7 @@ createCompleteCard();
 // stampare dinamicamente una card per ogni membro del team
 function createCompleteCard() {
     for (i = 0; i < membersTeam.length; i++) {
-        const member = membersTeam[i];
+        const members = membersTeam[i];
 
         // creo div contenitore dove inserire la card
         const cardTeam = document.createElement('div');
@@ -64,5 +64,19 @@ function createCompleteCard() {
         cardTeam.appendChild(cardImage);
         // aggiungo classe a div appena creato
         cardImage.className = 'card-image';
+
+        // creo div contenitore dove inserire il text
+        const cardText = document.createElement('div');
+        //  tramite append child inserisco div come figlio di .cardTeam
+        cardTeam.appendChild(cardText);
+        // aggiungo classe a div appena creato
+        cardText.className = 'card-text';
+
+        // creo img
+        const img = document.createElement('img')
+        //  tramite append child inserisco div come figlio di .cardTeam
+        cardImage.appendChild(img);
+        // inserisco immagine nel tag img
+        img.src = members.foto;
     }
 }
