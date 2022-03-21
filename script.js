@@ -74,9 +74,23 @@ function createCompleteCard() {
 
         // creo img
         const img = document.createElement('img')
-        //  tramite append child inserisco div come figlio di .cardTeam
+        //  tramite append child inserisco div come figlio di .cardImage
         cardImage.appendChild(img);
         // inserisco immagine nel tag img
         img.src = members.foto;
+
+        // creo h3
+        const h3 = document.createElement('h3');
+        //  tramite append child inserisco div come figlio di .cardImage
+        cardText.appendChild(h3);
+        // inserisco testo nel tag h3
+        h3.innerText = members.nome;
+
+        // creo p
+        const p = document.createElement('p');
+        //  tramite append child inserisco div come figlio di .cardImage
+        cardText.appendChild(p);
+        // inserisco testo nel tag h3
+        p.innerText = members.ruolo;
     }
 }
