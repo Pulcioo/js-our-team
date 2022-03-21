@@ -40,3 +40,40 @@ const membersTeam = [
         foto: 'img/barbara-ramos-graphic-designer.jpg'
     }
 ]
+
+createCompleteCard()
+
+// stampare dinamicamente una card per ogni membro del team
+function createCompleteCard() {
+    for (i = 0; i < membersTeam.length; i++) {
+        // creo div contenitore dove inserire la card
+        createTeamCard();
+    }
+    // creo div dove inserire img
+    createCardImage();
+
+    // creo div dove inserire il text
+
+}
+
+function createTeamCard() {
+    // creo div contenitore dove inserire la card
+    const cardTeam = document.createElement('div');
+    // seleziono tramite query selector la classe .team-container
+    const teamContainer = document.querySelector('.team-container');
+    // tramite append child inserisco div come figlio di .team-container
+    teamContainer.appendChild(cardTeam);
+    // aggiungo classe a div appena creato
+    cardTeam.className = 'team-card'
+}
+
+function createCardImage() {
+    // creo div contenitore dove inserire la card
+    const cardImage = document.createElement('div');
+    // seleziono tramite query selector la classe .team-card
+    const cardTeam = document.querySelector('.team-card');
+    //  tramite append child inserisco div come figlio di .cardTeam
+    cardTeam.appendChild(cardImage);
+    // aggiungo classe a div appena creato
+    cardImage.className = 'card-image';
+}
